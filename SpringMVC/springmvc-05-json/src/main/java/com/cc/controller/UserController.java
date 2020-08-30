@@ -1,5 +1,6 @@
 package com.cc.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.cc.pojo.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -51,5 +52,21 @@ public class UserController {
 
         String s = objectMapper.writeValueAsString(date);
         return s;
+    }
+
+    @RequestMapping("/j4")
+    //@ResponseBody//它就不会走视图解析器，直接返回一个字符串
+    public String json4() throws JsonProcessingException {
+        List<User> userList = new ArrayList<User>();
+
+        User user1 = new User(100, "策划个昵称", 3);
+        User user2 = new User(100, "策划个昵称", 3);
+        User user3 = new User(100, "策划个昵称", 3);
+
+        userList.add(user1);
+        userList.add(user2);
+        userList.add(user3);
+
+        return JSON.toJSONString(userList);
     }
 }
