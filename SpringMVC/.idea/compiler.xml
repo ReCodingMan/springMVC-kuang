@@ -2,15 +2,20 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc-04-controller" />
+        <module name="spring-mvc-servlet" />
+        <module name="springmvc-05-json" />
         <module name="springmvc-02-hellomvc" />
         <module name="springmvc-03-annotation" />
-        <module name="spring-mvc-servlet" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springmvc-01-servlet" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
