@@ -48,4 +48,32 @@ public class BookController {
         bookService.addBook(books);
         return "redirect:/book/allBook";//重定向到列表页
     }
+
+    /**
+     * 修改书籍页面
+     */
+    @RequestMapping("/toUpdateBook")
+    public String toUpdateBook(int id, Model model) {
+        Books books = bookService.queryBookById(id);
+        model.addAttribute("books", books);
+        return "updateBook";
+    }
+
+    /**
+     * 修改书
+     */
+    @RequestMapping("/updateBook")
+    public String updateBook(Books books) {
+        bookService.updateBook(books);
+        return "redirect:/book/allBook";
+    }
+
+    /**
+     * 删除书
+     */
+    public String deleteBook(int id) {
+        bookService.deleteBookById(id);
+        return "redirect:/book/allBook";
+    }
+
 }

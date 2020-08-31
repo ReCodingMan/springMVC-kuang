@@ -25,7 +25,7 @@ public interface BookService {
     /**
      * 查询一本书
      */
-    int queryBookById(int id);
+    Books queryBookById(int id);
 
     /**
      * 查询所有书

@@ -25,7 +25,7 @@ public interface BookMapper {
     /**
      * 查询一本书
      */
-    int queryBookById(@Param("bookID") int id);
+    Books queryBookById(@Param("bookID") int id);
 
     /**
      * 查询所有书

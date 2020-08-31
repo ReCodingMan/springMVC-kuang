@@ -45,7 +45,7 @@ public class BookServiceImpl implements BookService {
      *
      * @param id
      */
-    public int queryBookById(int id) {
+    public Books queryBookById(int id) {
         return bookMapper.queryBookById(id);
     }
 
