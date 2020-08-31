@@ -44,6 +44,11 @@
             <mvc:mapping path="/**"/>
             <bean class="com.cc.config.MyInterceptor"/>
         </mvc:interceptor>
+        
+        <mvc:interceptor>
+            <mvc:mapping path="/user/**"/>
+            <bean class="com.cc.config.LoginInterceptor"/>
+        </mvc:interceptor>
     </mvc:interceptors>
 
 </beans>
