@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc-02-hellomvc" />
         <module name="spring-mvc-servlet" />
+        <module name="springmvc-08-file" />
         <module name="springmvc-05-json" />
         <module name="springmvc-07-intercepter" />
         <module name="springmvc-03-annotation" />
