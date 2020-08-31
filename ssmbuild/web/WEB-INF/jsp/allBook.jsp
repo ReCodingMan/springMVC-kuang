@@ -14,5 +14,7 @@
 
     <h1>书籍展示页面</h1>
 
+    <a href="${pageContext.request.contextPath}/book/toAddBook">新增书籍</a>
+
 </body>
 </html>
