@@ -31,4 +31,9 @@ public interface BookMapper {
      * 查询所有书
      */
     List<Books> queryAllBook();
+
+    /**
+     * 通过名字查询
+     */
+    List<Books> queryBookByName(@Param("bookName") String bookName);
 }

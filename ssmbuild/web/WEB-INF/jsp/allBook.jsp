@@ -16,5 +16,12 @@
 
     <a href="${pageContext.request.contextPath}/book/toAddBook">新增书籍</a>
 
+    <br>
+
+    <form action="${pageContext.request.contextPath}/book/queryBook" method="post">
+        <input type="text" name="queryBookName">
+        <input type="submit" value="查询">
+    </form>
+
 </body>
 </html>

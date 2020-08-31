@@ -71,8 +71,20 @@ public class BookController {
     /**
      * 删除书
      */
+    @RequestMapping("/deleteBook")
     public String deleteBook(int id) {
         bookService.deleteBookById(id);
+        return "redirect:/book/allBook";
+    }
+
+    /**
+     * 查询书籍
+     */
+    @RequestMapping("/queryBook")
+    public String queryBook(String queryBookName,Model model) {
+        List<Books> books = bookService.queryBookByName(queryBookName);
+        System.out.println(books);
+        model.addAttribute("list", books);
         return "redirect:/book/allBook";
     }
 

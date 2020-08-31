@@ -55,4 +55,13 @@ public class BookServiceImpl implements BookService {
     public List<Books> queryAllBook() {
         return bookMapper.queryAllBook();
     }
+
+    /**
+     * 通过名字查询
+     *
+     * @param bookName
+     */
+    public List<Books> queryBookByName(String bookName) {
+        return bookMapper.queryBookByName(bookName);
+    }
 }
